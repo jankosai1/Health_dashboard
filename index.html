@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Health Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #2c3e50;
+    }
+
+    header {
+      background: linear-gradient(to right, #3f51b5, #5a55ae);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 25px;
+      padding: 40px 30px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .chart-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease;
+    }
+ .chart-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .chart-box h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #3f51b5;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .chart-box h3 {
+        font-size: 1rem;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🩺 Community Health & Outbreak Dashboard</h1>
+  </header>
+
+  <div class="grid-container">
+
+    <div class="chart-box">
+      <h3>Illness Cases by Type (Pie Chart)</h3>
+      <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/a3217bed-8209-41b0-9386-2cd33e0c7af9/page/eSffF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+
+    <div class="chart-box">
+      <h3>Illness Summary Table</h3>
+     <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/8d24f257-3685-49a9-907e-94531b0fe149/page/KVffF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+
+    <div class="chart-box">
+      <h3>Outbreak Cases by Type (Bar Chart)</h3>
+      <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/78dd542d-9230-4f18-af25-bbaa050d73e0/page/6ZffF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+
+    <div class="chart-box">
+      <h3>Outbreak Map (Geo Distribution)</h3>
+     <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/37a55b1f-5b00-4c5f-9234-63d6a7f07143/page/UJKfF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
